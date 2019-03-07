@@ -59,6 +59,10 @@
 			that.myProjects.splice(index, 1);
 			//since in this case, event is triggered by child, parent data won't be updated until
 			//we call it to update manually.
+			// console.log(that.projectNum);
+			// console.log("removing");
+			console.log(that.myProjects.length);
+			that.projectNum = that.myProjects.length;
 			that.update();
 		};
 
@@ -78,6 +82,7 @@
 
 		 this.on ("updated",function(){
 			 this.projectNum = this. myProjects.length;
+			 // that.update();
 		 });
 
 	</script>
